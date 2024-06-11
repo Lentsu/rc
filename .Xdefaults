@@ -1,0 +1,47 @@
+URxvt*transparent: false
+#URxvt*tintColor: Blue
+#URxvt*shading: 40
+URxvt*saveLines: 12000
+URxvt*foreground: White
+URxvt*background: Black
+
+URxvt*font: xft:DinaRemasterII:pixelsize=20
+URxvt*boldfont: xft:DinaRemasterII:bold:pixelsize=20
+
+#URxvt*color2: RoyalBlue
+#URxvt*color10: RoyalBlue
+
+#URxvt*color3: RoyalBlue
+#URxvt*color11: RoyalBlue
+
+#URxvt*color4: RoyalBlue
+#URxvt*color12: RoyalBlue
+
+URxvt*scrollBar: false
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: rxvt
+
+!Black
+URxvt.color0: #000000
+URxvt.color8: #555753
+!Red
+URxvt.color1: #990099
+URxvt.color9: #8E388E
+!Green
+URxvt.color2: #4E9A06
+URxvt.color10: #699000
+!Yellow
+URxvt.color3: #FFA500
+URxvt.color11: #FFA500
+!Blue
+URxvt.color4: #3465A4
+URxvt.color12: #729FCF
+!Magenta
+URxvt.color5: #75507B
+URxvt.color13: #AD7FA8
+! Cyan
+URxvt.color6: #06989A
+URxvt.color14: #34E2E2
+!White
+URxvt.color7: #FFFFFF
+URxvt.color15: #FFFFFF

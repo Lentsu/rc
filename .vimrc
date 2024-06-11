@@ -1,9 +1,18 @@
-"VIMRC   - 26.09.2022
-"AUTHOR	 - LENNI TOIKKANEN
-"LICENSE - GNU GENERAL PUBLIC LICENSE 2.0
+"VIMRC   - 04.06.2024
+"AUTHOR  - LENNI TOIKKANEN
 
 "BE NOCOMPATIBLE
 set nocompatible
+
+"PLUGINS
+call plug#begin()
+
+Plug 'sheerun/vim-polyglot'
+Plug 'preservim/nerdtree'
+Plug 'Lokaltog/vim-monotone'
+Plug 'ap/vim-css-color'
+
+call plug#end()
 
 "ENABLE SYNTAX HIHGLIGHTING
 syntax on
@@ -11,17 +20,8 @@ syntax on
 "COLORSCHEME
 set t_Co=256
 set bg=dark
-let $SCHEME = "monotone" 	"<-- COLORSCHEME
-"Monotone colorscheme specific preferences
-if ($SCHEME == "monotone")
-colorscheme $SCHEME		"set the scheme
-	let g:monotone_emphasize_comments = 1
-	let g:monotone_secondary_hue_offset = 0
-	let g:monotone_contrast_factor = 1
-	let g:monotone_color = [1, 1, 1] " THEME COLOR
-else
-	colorscheme $SCHEME		"set the scheme
-endif
+
+colorscheme monotone                "<-- COLORSCHEME
 
 "PREFERENCES
 set ruler
@@ -36,13 +36,18 @@ set hlsearch
 set incsearch
 set smartcase
 
-"TAB BEHAVIOUR
+"TAB BEHAVIOUR (DEFAULT TAB = 4c)
 set autoindent
 set tabstop=4
+set shiftwidth=4 smarttab
+set expandtab
 set nofoldenable
 
+" USE FILETYPE SPECIFIC BEHAVIOUR
+autocmd FileType scala setlocal tabstop=2 shiftwidth=2
+
 "SYSTEM OPTIONS
-set backupdir=$HOME/.cache/vim	"<-- VIM BACKUP DIRECTORY
-set dir=$HOME/.cache/vim	"<-- VIM SWP DIRECTORY
-set encoding=utf-8		"<-- DEFAULT ENCODING
+set backupdir=$HOME/.cache/vim    "<-- VIM BACKUP DIRECTORY
+set dir=$HOME/.cache/vim          "<-- VIM SWP DIRECTORY
+set encoding=utf-8                "<-- DEFAULT ENCODING
 set history=50
